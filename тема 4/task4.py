@@ -31,9 +31,11 @@ def quiz():
     print('Welcome. This is a 10 question math quiz\n')
     score = 0
     times = 0
-    while times < 9:
+    while times < 10:
         correct = askQuestion()
-        if correct:
+        if times == 10:
+            break
+        elif correct:
             score += 1
             print('Correct!\n')
             print(score)
